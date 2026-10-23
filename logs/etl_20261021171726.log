@@ -1,0 +1,58 @@
+17:17:26 | INFO    | Inicio del ETL (ejecución 20261021171726) -> root@127.0.0.1:3306/opiniones_clientes
+17:17:26 | INFO    | Base de datos 'opiniones_clientes' y tablespaces ['ts_primary', 'ts_secondary'] eliminados
+17:17:26 | INFO    | Script ejecutado: 00_almacenamiento_fisico.sql
+17:17:26 | INFO    | Script ejecutado: 01_esquema.sql
+17:17:26 | INFO    | Script ejecutado: 02_procedimientos.sql
+17:17:26 | INFO    | Script ejecutado: 03_vistas.sql
+17:17:26 | INFO    | Procesando fuente_datos.csv: 5 registros leídos
+17:17:26 | INFO    |   -> fuente_datos.csv: insertados=3 rechazados=2
+17:17:26 | INFO    | Procesando clients.csv: 7 registros leídos
+17:17:26 | INFO    |   -> clients.csv: insertados=2 rechazados=5
+17:17:26 | INFO    | Procesando products.csv: 3 registros leídos
+17:17:26 | INFO    |   -> products.csv: insertados=2 rechazados=1
+17:17:26 | INFO    | Supuesto: surveys_part1.csv se asocia a IdFuente F002 (TipoFuente='CSV')
+17:17:26 | INFO    | Supuesto: social_comments.csv se asocia a IdFuente F004 (TipoFuente='Red Social')
+17:17:26 | INFO    | Supuesto: web_reviews.csv se asocia a IdFuente F001 (TipoFuente='Web')
+17:17:26 | INFO    | Procesando surveys_part1.csv: 8 registros leídos
+17:17:26 | INFO    |   -> surveys_part1.csv: insertados=2 rechazados=6
+17:17:26 | ERROR   | Estructura inválida: social_comments.csv: faltan las columnas ['Fecha']. Encontradas: ['IdComment', 'IdCliente', 'IdProducto', 'Fuente', 'Comentario']
+17:17:26 | INFO    | Procesando web_reviews.csv: 6 registros leídos
+17:17:26 | INFO    |   -> web_reviews.csv: insertados=1 rechazados=5
+17:17:26 | INFO    | ==============================================================================
+17:17:26 | INFO    |  RESUMEN DE LA CARGA  (ejecución 20261021171726)
+17:17:26 | INFO    | ==============================================================================
+17:17:26 | INFO    |  Archivo                     Leídos   Insertados   Rechazados
+17:17:26 | INFO    |  ------------------------------------------------------------
+17:17:26 | INFO    |  fuente_datos.csv                 5            3            2
+17:17:26 | INFO    |  clients.csv                      7            2            5
+17:17:26 | INFO    |  products.csv                     3            2            1
+17:17:26 | INFO    |  surveys_part1.csv                8            2            6
+17:17:26 | INFO    |  social_comments.csv              0            0            0
+17:17:26 | INFO    |  web_reviews.csv                  6            1            5
+17:17:26 | INFO    |  ------------------------------------------------------------
+17:17:26 | INFO    |  TOTAL                           29           10           19
+17:17:26 | INFO    | 
+17:17:26 | INFO    |  Motivos de rechazo:
+17:17:26 | INFO    |    [fuente_datos.csv] Valor fuera de catálogo · TipoFuente: 1
+17:17:26 | INFO    |    [fuente_datos.csv] Registro duplicado · IdFuente: 1
+17:17:26 | INFO    |    [clients.csv] Formato inválido · Email: 1
+17:17:26 | INFO    |    [clients.csv] Campo obligatorio vacío · Nombre: 1
+17:17:26 | INFO    |    [clients.csv] Tipo de dato inválido · IdCliente: 1
+17:17:26 | INFO    |    [clients.csv] Registro duplicado · Email: 1
+17:17:26 | INFO    |    [clients.csv] Registro duplicado · IdCliente: 1
+17:17:26 | INFO    |    [products.csv] Campo obligatorio vacío · Categoría: 1
+17:17:26 | INFO    |    [surveys_part1.csv] Valor fuera de rango · PuntajeSatisfacción: 1
+17:17:26 | INFO    |    [surveys_part1.csv] Formato inválido · Fecha: 1
+17:17:26 | INFO    |    [surveys_part1.csv] Valor fuera de catálogo · Clasificación: 1
+17:17:26 | INFO    |    [surveys_part1.csv] Registro duplicado · IdOpinion: 1
+17:17:26 | INFO    |    [surveys_part1.csv] Integridad referencial · IdCliente: 1
+17:17:26 | INFO    |    [surveys_part1.csv] Integridad referencial · IdProducto: 1
+17:17:26 | INFO    |    [web_reviews.csv] Formato inválido · IdCliente: 1
+17:17:26 | INFO    |    [web_reviews.csv] Tipo de dato inválido · Rating: 1
+17:17:26 | INFO    |    [web_reviews.csv] Valor fuera de rango · Fecha: 1
+17:17:26 | INFO    |    [web_reviews.csv] Registro duplicado · IdReview: 1
+17:17:26 | INFO    |    [web_reviews.csv] Campo obligatorio vacío · IdCliente: 1
+17:17:26 | INFO    |  ARCHIVO NO PROCESADO [social_comments.csv]: social_comments.csv: faltan las columnas ['Fecha']. Encontradas: ['IdComment', 'IdCliente', 'IdProducto', 'Fuente', 'Comentario']
+17:17:26 | INFO    | 
+17:17:26 | INFO    |  Duración: 0.34 s
+17:17:26 | INFO    | ==============================================================================

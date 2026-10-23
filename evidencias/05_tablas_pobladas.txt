@@ -1,0 +1,91 @@
+### cliente (5 de 500)
++-----------+-----------+-------------------+
+| IdCliente | Nombre    | Email             |
++-----------+-----------+-------------------+
+|         1 | Cliente_1 | cliente1@mail.com |
+|         2 | Cliente_2 | cliente2@mail.com |
+|         3 | Cliente_3 | cliente3@mail.com |
+|         4 | Cliente_4 | cliente4@mail.com |
+|         5 | Cliente_5 | cliente5@mail.com |
++-----------+-----------+-------------------+
+### producto (5 de 200)
++------------+------------+--------------+
+| IdProducto | Nombre     | Categoria    |
++------------+------------+--------------+
+|          1 | Producto_1 | Juguetes     |
+|          2 | Producto_2 | Electrónica  |
+|          3 | Producto_3 | Juguetes     |
+|          4 | Producto_4 | Ropa         |
+|          5 | Producto_5 | Juguetes     |
++------------+------------+--------------+
+### fuente_datos (5 de 100)
++----------+------------+------------+
+| IdFuente | TipoFuente | FechaCarga |
++----------+------------+------------+
+| F001     | Web        | 2025-04-10 |
+| F002     | CSV        | 2025-01-01 |
+| F003     | CSV        | 2025-03-12 |
+| F004     | CSV        | 2025-01-28 |
+| F005     | Red Social | 2025-08-02 |
++----------+------------+------------+
+### opinion (5 de 406)
++-----------+----------+-----------+------------+----------+------------+--------------------------------------------------------------+------------+
+| IdOpinion | IdOrigen | IdCliente | IdProducto | IdFuente | Fecha      | Comentario                                                   | TipoOrigen |
++-----------+----------+-----------+------------+----------+------------+--------------------------------------------------------------+------------+
+|         1 | 124      |       382 |        131 | F002     | 2024-12-19 | El producto cumple su función, nada especial.                | Encuesta   |
+|         2 | 158      |       283 |         87 | F002     | 2025-06-03 | No era lo que esperaba, muy decepcionado.                    | Encuesta   |
+|         3 | 206      |       190 |        148 | F002     | 2025-03-08 | El servicio fue rápido y eficiente, estoy muy satisfecho.    | Encuesta   |
+|         4 | 221      |       353 |        124 | F002     | 2025-01-01 | El servicio fue lento y el soporte no resolvió mi problema.  | Encuesta   |
+|         5 | 284      |       157 |         57 | F002     | 2024-11-24 | El envío fue normal, dentro del tiempo esperado.             | Encuesta   |
++-----------+----------+-----------+------------+----------+------------+--------------------------------------------------------------+------------+
+### opinion_encuesta (6 de 6)
++-----------+---------------+---------------------+
+| IdOpinion | Clasificacion | PuntajeSatisfaccion |
++-----------+---------------+---------------------+
+|         1 | Neutra        |                   3 |
+|         2 | Negativa      |                   2 |
+|         3 | Positiva      |                   4 |
+|         4 | Negativa      |                   1 |
+|         5 | Neutra        |                   3 |
+|         6 | Positiva      |                   4 |
++-----------+---------------+---------------------+
+### opinion_social (5 de 200)
++-----------+-----------+
+| IdOpinion | Canal     |
++-----------+-----------+
+|         7 | Instagram |
+|         8 | Twitter   |
+|         9 | Instagram |
+|        10 | Twitter   |
+|        11 | Instagram |
++-----------+-----------+
+### opinion_web (5 de 200)
++-----------+--------+
+| IdOpinion | Rating |
++-----------+--------+
+|       207 |      4 |
+|       208 |      3 |
+|       209 |      5 |
+|       210 |      4 |
+|       211 |      1 |
++-----------+--------+
+### etl_rechazo (5 de 494)
++-----------+-------------------+------+------------------------+-----------+--------------------------------------------+
+| IdRechazo | Archivo           | Fila | TipoError              | Campo     | Detalle                                    |
++-----------+-------------------+------+------------------------+-----------+--------------------------------------------+
+|         1 | surveys_part1.csv |    2 | Integridad referencial | IdCliente | cliente 8537 no existe en la tabla cliente |
+|         2 | surveys_part1.csv |    3 | Integridad referencial | IdCliente | cliente 2721 no existe en la tabla cliente |
+|         3 | surveys_part1.csv |    4 | Integridad referencial | IdCliente | cliente 8424 no existe en la tabla cliente |
+|         4 | surveys_part1.csv |    5 | Integridad referencial | IdCliente | cliente 9672 no existe en la tabla cliente |
+|         5 | surveys_part1.csv |    6 | Integridad referencial | IdCliente | cliente 8018 no existe en la tabla cliente |
++-----------+-------------------+------+------------------------+-----------+--------------------------------------------+
+### v_resumen_por_producto (5)
++------------+-------------+--------------+----------------+-----------+----------+-----+-------------------+-------------------------+
+| IdProducto | Producto    | Categoria    | TotalOpiniones | Encuestas | Sociales | Web | RatingPromedioWeb | PuntajePromedioEncuesta |
++------------+-------------+--------------+----------------+-----------+----------+-----+-------------------+-------------------------+
+|          5 | Producto_5  | Juguetes     |             33 |         0 |       17 |  16 |              3.19 |                    NULL |
+|          3 | Producto_3  | Juguetes     |             30 |         0 |       13 |  17 |              2.82 |                    NULL |
+|         13 | Producto_13 | Electrónica  |             28 |         0 |       17 |  11 |              3.55 |                    NULL |
+|          2 | Producto_2  | Electrónica  |             26 |         0 |       11 |  15 |              2.33 |                    NULL |
+|         10 | Producto_10 | Electrónica  |             26 |         0 |       16 |  10 |              2.60 |                    NULL |
++------------+-------------+--------------+----------------+-----------+----------+-----+-------------------+-------------------------+

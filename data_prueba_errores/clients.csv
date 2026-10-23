@@ -1,0 +1,8 @@
+IdCliente,Nombre,Email
+1,Ana Pérez,ana@mail.com
+2,Luis Gómez,sin-arroba
+3,,carla@mail.com
+abc,Pedro Ruiz,pedro@mail.com
+4,Ana Duplicada,ana@mail.com
+1,Id Repetido,otro@mail.com
+5,Mario Díaz,mario@mail.com

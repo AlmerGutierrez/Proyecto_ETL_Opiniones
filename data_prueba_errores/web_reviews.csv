@@ -1,0 +1,7 @@
+IdReview,IdCliente,IdProducto,Fecha,Comentario,Rating
+W0001,C001,P001,2025-03-01,Excelente,5
+W0002,X007,P001,2025-03-02,Formato de cliente invalido,3
+W0003,C001,P001,2025-03-03,Rating no numerico,cinco
+W0004,C001,P001,2099-01-01,Fecha futura,4
+W0001,C005,P003,2025-03-05,Id repetido,4
+W0005,,P001,2025-03-06,Cliente vacio,4

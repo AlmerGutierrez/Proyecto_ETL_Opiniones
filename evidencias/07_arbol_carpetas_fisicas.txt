@@ -1,0 +1,12 @@
+Árbol de carpetas (equivale a C:\Data\OpinionesClientes en Windows)
+
+OpinionesClientes/Primary/
+    ts_primary.ibd             64 MB
+OpinionesClientes/Secondary/
+    ts_secondary.ibd           64 MB
+OpinionesClientes/Log/
+    #innodb_redo/   (carpeta con los archivos del redo log de InnoDB)
+    binlog.000001             0.2 KB
+    binlog.000002               3 MB
+    binlog.index              0.1 KB
+    error.log                 3.7 KB

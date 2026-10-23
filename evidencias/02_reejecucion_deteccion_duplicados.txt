@@ -1,0 +1,42 @@
+19:32:48 | INFO    | Inicio del ETL (ejecución 20261020193248) -> root@127.0.0.1:3308/opiniones_clientes
+19:32:48 | INFO    | Procesando fuente_datos.csv: 100 registros leídos
+19:32:49 | INFO    |   -> fuente_datos.csv: insertados=0 rechazados=100
+19:32:49 | INFO    | Procesando clients.csv: 500 registros leídos
+19:32:49 | INFO    |   -> clients.csv: insertados=0 rechazados=500
+19:32:49 | INFO    | Procesando products.csv: 200 registros leídos
+19:32:49 | INFO    |   -> products.csv: insertados=0 rechazados=200
+19:32:49 | INFO    | Supuesto: surveys_part1.csv se asocia a IdFuente F002 (TipoFuente='CSV')
+19:32:49 | INFO    | Supuesto: social_comments.csv se asocia a IdFuente F005 (TipoFuente='Red Social')
+19:32:49 | INFO    | Supuesto: web_reviews.csv se asocia a IdFuente F001 (TipoFuente='Web')
+19:32:49 | INFO    | Procesando surveys_part1.csv: 500 registros leídos
+19:32:50 | INFO    |   -> surveys_part1.csv: insertados=0 rechazados=500
+19:32:50 | INFO    | Procesando social_comments.csv: 200 registros leídos
+19:32:50 | INFO    |   -> social_comments.csv: insertados=0 rechazados=200
+19:32:50 | INFO    | Procesando web_reviews.csv: 200 registros leídos
+19:32:50 | INFO    |   -> web_reviews.csv: insertados=0 rechazados=200
+19:32:50 | INFO    | ==============================================================================
+19:32:50 | INFO    |  RESUMEN DE LA CARGA  (ejecución 20261020193248)
+19:32:50 | INFO    | ==============================================================================
+19:32:50 | INFO    |  Archivo                     Leídos   Insertados   Rechazados
+19:32:50 | INFO    |  ------------------------------------------------------------
+19:32:50 | INFO    |  fuente_datos.csv               100            0          100
+19:32:50 | INFO    |  clients.csv                    500            0          500
+19:32:50 | INFO    |  products.csv                   200            0          200
+19:32:50 | INFO    |  surveys_part1.csv              500            0          500
+19:32:50 | INFO    |  social_comments.csv            200            0          200
+19:32:50 | INFO    |  web_reviews.csv                200            0          200
+19:32:50 | INFO    |  ------------------------------------------------------------
+19:32:50 | INFO    |  TOTAL                         1700            0         1700
+19:32:50 | INFO    | 
+19:32:50 | INFO    |  Motivos de rechazo:
+19:32:50 | INFO    |    [fuente_datos.csv] Registro duplicado · IdFuente: 100
+19:32:50 | INFO    |    [clients.csv] Registro duplicado · IdCliente: 500
+19:32:50 | INFO    |    [products.csv] Registro duplicado · IdProducto: 200
+19:32:50 | INFO    |    [surveys_part1.csv] Integridad referencial · IdCliente: 473
+19:32:50 | INFO    |    [surveys_part1.csv] Integridad referencial · IdProducto: 21
+19:32:50 | INFO    |    [surveys_part1.csv] Registro duplicado · IdOpinion: 6
+19:32:50 | INFO    |    [social_comments.csv] Registro duplicado · IdComment: 200
+19:32:50 | INFO    |    [web_reviews.csv] Registro duplicado · IdReview: 200
+19:32:50 | INFO    | 
+19:32:50 | INFO    |  Duración: 1.70 s
+19:32:50 | INFO    | ==============================================================================

@@ -1,0 +1,21 @@
+# =====================================================================
+# Configuración del SERVIDOR MySQL (my.ini en Windows, my.cnf en Linux/macOS)
+# Windows: normalmente C:\ProgramData\MySQL\MySQL Server 8.0\my.ini  (requiere administrador)
+# Después de editarlo hay que REINICIAR el servicio de MySQL.
+# Usar barras normales (/) también en Windows.
+# =====================================================================
+[mysqld]
+
+# OBLIGATORIO para que ts_primary y ts_secondary puedan vivir fuera de la carpeta de datos.
+# Sin esto: ERROR 3121 The DATAFILE location must be in a known directory.
+innodb_directories = "C:/Data/OpinionesClientes/Primary;C:/Data/OpinionesClientes/Secondary"
+
+# OPCIONAL - carpeta Log (se pueden cambiar con el servicio detenido y reiniciar)
+log_bin   = C:/Data/OpinionesClientes/Log/binlog
+log_error = C:/Data/OpinionesClientes/Log/error.log
+
+# OPCIONAL Y DELICADO - ubicación del redo log (registro de transacciones de InnoDB).
+# MySQL la define al inicializar el servidor. En una instalación existente, si solo cambias
+# esta línea el servidor NO arranca (error: "Neither found #innodb_redo subdirectory").
+# Hay que detener el servicio, MOVER la carpeta #innodb_redo a la nueva ruta y luego reiniciar.
+# innodb_log_group_home_dir = C:/Data/OpinionesClientes/Log

@@ -1,0 +1,27 @@
++--------------+--------------------------------------------------------+----------+---------------+
+| Tablespace   | ArchivoFisico                                          | TamanoMB | CrecimientoMB |
++--------------+--------------------------------------------------------+----------+---------------+
+| ts_primary   | /tmp/Data/OpinionesClientes/Primary/ts_primary.ibd     |     64.0 |          64.0 |
+| ts_secondary | /tmp/Data/OpinionesClientes/Secondary/ts_secondary.ibd |     64.0 |          64.0 |
++--------------+--------------------------------------------------------+----------+---------------+
++------------------+--------------+
+| Tabla            | Tablespace   |
++------------------+--------------+
+| cliente          | ts_primary   |
+| fuente_datos     | ts_primary   |
+| producto         | ts_primary   |
+| etl_rechazo      | ts_secondary |
+| opinion          | ts_secondary |
+| opinion_encuesta | ts_secondary |
+| opinion_social   | ts_secondary |
+| opinion_web      | ts_secondary |
++------------------+--------------+
++---------------------------+---------------------------------------------------------------------------+
+| Variable_name             | Value                                                                     |
++---------------------------+---------------------------------------------------------------------------+
+| datadir                   | /tmp/m8/data/                                                             |
+| innodb_directories        | /tmp/Data/OpinionesClientes/Primary;/tmp/Data/OpinionesClientes/Secondary |
+| innodb_log_group_home_dir | /tmp/Data/OpinionesClientes/Log                                           |
+| log_bin_basename          | /tmp/Data/OpinionesClientes/Log/binlog                                    |
+| log_error                 | /tmp/Data/OpinionesClientes/Log/error.log                                 |
++---------------------------+---------------------------------------------------------------------------+

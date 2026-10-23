@@ -1,0 +1,9 @@
+IdOpinion,IdCliente,IdProducto,Fecha,Comentario,Clasificación,PuntajeSatisfacción,Fuente
+1,1,1,2025-07-15,Muy buen producto,Positiva,5,EncuestaInterna
+2,1,1,2025-07-16,Regular,Neutra,9,EncuestaInterna
+3,1,1,15/07/2025,Bien,Positiva,4,EncuestaInterna
+4,1,1,2025-07-17,Malo,Pésima,1,EncuestaInterna
+1,5,3,2025-07-18,Duplicado,Positiva,5,EncuestaInterna
+5,999,1,2025-07-19,Cliente inexistente,Neutra,3,EncuestaInterna
+6,1,77,2025-07-19,Producto inexistente,Neutra,3,EncuestaInterna
+7,5,3,2025-07-20,"Comentario, con coma",Positiva,5,EncuestaInterna

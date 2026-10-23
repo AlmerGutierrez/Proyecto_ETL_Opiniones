@@ -1,0 +1,68 @@
++------------------+-----------+
+| Tabla            | Registros |
++------------------+-----------+
+| cliente          |       500 |
+| producto         |       200 |
+| fuente_datos     |       100 |
+| opinion          |       406 |
+| opinion_encuesta |         6 |
+| opinion_social   |       200 |
+| opinion_web      |       200 |
+| etl_rechazo      |       494 |
++------------------+-----------+
++--------------------------------+
+| OpinionesConClienteInexistente |
++--------------------------------+
+|                              0 |
++--------------------------------+
++----------------------------------------+
+| OpinionesConProductoOFuenteInexistente |
++----------------------------------------+
+|                                      0 |
++----------------------------------------+
++--------------------------+
+| OpinionesSinSubtipoUnico |
++--------------------------+
+|                        0 |
++--------------------------+
++-----------------------------+
+| OpinionesConTipoIncoherente |
++-----------------------------+
+|                           0 |
++-----------------------------+
++------------------+
+| GruposDuplicados |
++------------------+
+|                0 |
++------------------+
++---------------------+
+| ComentariosAnonimos |
++---------------------+
+|                  88 |
++---------------------+
++------------+-------+----------+--------------+-------------+
+| TipoOrigen | Total | Anonimas | PrimeraFecha | UltimaFecha |
++------------+-------+----------+--------------+-------------+
+| Encuesta   |     6 |        0 | 2024-11-24   | 2025-07-02  |
+| Social     |   200 |       88 | 2025-06-15   | 2025-09-13  |
+| Web        |   200 |        0 | 2024-09-13   | 2025-09-04  |
++------------+-------+----------+--------------+-------------+
++-------------------+------------------------+------------+-----------+
+| Archivo           | TipoError              | Campo      | Registros |
++-------------------+------------------------+------------+-----------+
+| surveys_part1.csv | Integridad referencial | IdCliente  |       473 |
+| surveys_part1.csv | Integridad referencial | IdProducto |        21 |
++-------------------+------------------------+------------+-----------+
++-----------+------------+----------+------------+----------------------------------------------------------------+-----------+-----------+------------+-------------+--------------+----------+------------+---------------+---------------------+-----------+--------+
+| IdOpinion | TipoOrigen | IdOrigen | Fecha      | Comentario                                                     | IdCliente | Cliente   | IdProducto | Producto    | Categoria    | IdFuente | TipoFuente | Clasificacion | PuntajeSatisfaccion | Canal     | Rating |
++-----------+------------+----------+------------+----------------------------------------------------------------+-----------+-----------+------------+-------------+--------------+----------+------------+---------------+---------------------+-----------+--------+
+|       310 | Web        | W0104    | 2024-10-13 | Producto recibido, cumple su función. OK.                      |         7 | Cliente_7 |         14 | Producto_14 | Hogar        | F001     | Web        | NULL          |                NULL | NULL      |      5 |
+|       207 | Web        | W0001    | 2024-10-23 | Producto llegó rápido y funciona perfecto. Muy recomendable.   |         7 | Cliente_7 |         16 | Producto_16 | Deportes     | F001     | Web        | NULL          |                NULL | NULL      |      4 |
+|       361 | Web        | W0155    | 2024-12-18 | Pésima atención al cliente. No volvería a comprar.             |         7 | Cliente_7 |         10 | Producto_10 | Electrónica  | F001     | Web        | NULL          |                NULL | NULL      |      1 |
+|       276 | Web        | W0070    | 2025-03-14 | Gran relación calidad-precio. Muy recomendable.                |         7 | Cliente_7 |         16 | Producto_16 | Deportes     | F001     | Web        | NULL          |                NULL | NULL      |      5 |
+|       280 | Web        | W0074    | 2025-04-08 | Producto recibido, cumple su función. OK.                      |         7 | Cliente_7 |          5 | Producto_5  | Juguetes     | F001     | Web        | NULL          |                NULL | NULL      |      4 |
+|       395 | Web        | W0189    | 2025-04-10 | Producto llegó rápido y funciona perfecto. Muy recomendable.   |         7 | Cliente_7 |         11 | Producto_11 | Hogar        | F001     | Web        | NULL          |                NULL | NULL      |      4 |
+|       291 | Web        | W0085    | 2025-07-06 | Gran relación calidad-precio. Muy recomendable.                |         7 | Cliente_7 |          4 | Producto_4  | Ropa         | F001     | Web        | NULL          |                NULL | NULL      |      4 |
+|        34 | Social     | T0028    | 2025-07-29 | Producto llegó rápido y funciona perfecto                      |         7 | Cliente_7 |          4 | Producto_4  | Ropa         | F005     | Red Social | NULL          |                NULL | Instagram |   NULL |
+|        65 | Social     | T0059    | 2025-08-03 | Muy satisfecho con la compra, lo recomiendo                    |         7 | Cliente_7 |         11 | Producto_11 | Hogar        | F005     | Red Social | NULL          |                NULL | Facebook  |   NULL |
++-----------+------------+----------+------------+----------------------------------------------------------------+-----------+-----------+------------+-------------+--------------+----------+------------+---------------+---------------------+-----------+--------+

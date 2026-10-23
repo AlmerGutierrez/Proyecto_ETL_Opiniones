@@ -1,0 +1,2 @@
+16:40:53 | INFO    | Inicio del ETL (ejecución 20261021164053) -> root@127.0.0.1:3306/opiniones_clientes
+16:40:53 | ERROR   | El proceso se detuvo: No se pudo conectar a la base de datos: (1045, "Access denied for user 'root'@'localhost' (using password: NO)")

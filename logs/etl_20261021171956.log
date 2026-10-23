@@ -1,0 +1,41 @@
+17:19:56 | INFO    | Inicio del ETL (ejecución 20261021171956) -> root@127.0.0.1:3306/opiniones_clientes
+17:19:57 | INFO    | Base de datos 'opiniones_clientes' y tablespaces ['ts_primary', 'ts_secondary'] eliminados
+17:19:57 | INFO    | Script ejecutado: 00_almacenamiento_fisico.sql
+17:19:57 | INFO    | Script ejecutado: 01_esquema.sql
+17:19:57 | INFO    | Script ejecutado: 02_procedimientos.sql
+17:19:57 | INFO    | Script ejecutado: 03_vistas.sql
+17:19:57 | INFO    | Procesando fuente_datos.csv: 100 registros leídos
+17:19:57 | INFO    |   -> fuente_datos.csv: insertados=100 rechazados=0
+17:19:57 | INFO    | Procesando clients.csv: 500 registros leídos
+17:19:57 | INFO    |   -> clients.csv: insertados=500 rechazados=0
+17:19:57 | INFO    | Procesando products.csv: 200 registros leídos
+17:19:57 | INFO    |   -> products.csv: insertados=200 rechazados=0
+17:19:57 | INFO    | Supuesto: surveys_part1.csv se asocia a IdFuente F002 (TipoFuente='CSV')
+17:19:57 | INFO    | Supuesto: social_comments.csv se asocia a IdFuente F005 (TipoFuente='Red Social')
+17:19:57 | INFO    | Supuesto: web_reviews.csv se asocia a IdFuente F001 (TipoFuente='Web')
+17:19:57 | INFO    | Procesando surveys_part1.csv: 500 registros leídos
+17:19:57 | INFO    |   -> surveys_part1.csv: insertados=6 rechazados=494
+17:19:57 | INFO    | Procesando social_comments.csv: 200 registros leídos
+17:19:57 | INFO    |   -> social_comments.csv: insertados=200 rechazados=0
+17:19:57 | INFO    | Procesando web_reviews.csv: 200 registros leídos
+17:19:57 | INFO    |   -> web_reviews.csv: insertados=200 rechazados=0
+17:19:57 | INFO    | ==============================================================================
+17:19:57 | INFO    |  RESUMEN DE LA CARGA  (ejecución 20261021171956)
+17:19:57 | INFO    | ==============================================================================
+17:19:57 | INFO    |  Archivo                     Leídos   Insertados   Rechazados
+17:19:57 | INFO    |  ------------------------------------------------------------
+17:19:57 | INFO    |  fuente_datos.csv               100          100            0
+17:19:57 | INFO    |  clients.csv                    500          500            0
+17:19:57 | INFO    |  products.csv                   200          200            0
+17:19:57 | INFO    |  surveys_part1.csv              500            6          494
+17:19:57 | INFO    |  social_comments.csv            200          200            0
+17:19:57 | INFO    |  web_reviews.csv                200          200            0
+17:19:57 | INFO    |  ------------------------------------------------------------
+17:19:57 | INFO    |  TOTAL                         1700         1206          494
+17:19:57 | INFO    | 
+17:19:57 | INFO    |  Motivos de rechazo:
+17:19:57 | INFO    |    [surveys_part1.csv] Integridad referencial · IdCliente: 473
+17:19:57 | INFO    |    [surveys_part1.csv] Integridad referencial · IdProducto: 21
+17:19:57 | INFO    | 
+17:19:57 | INFO    |  Duración: 0.80 s
+17:19:57 | INFO    | ==============================================================================
