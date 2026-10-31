@@ -1,0 +1,6 @@
+sk_fuente	tipo_fuente	canal	ambito
+1	Encuesta	EncuestaInterna	Interno
+2	Reseña web	SitioWeb	Interno
+3	Red social	Facebook	Externo
+4	Red social	Instagram	Externo
+5	Red social	Twitter	Externo

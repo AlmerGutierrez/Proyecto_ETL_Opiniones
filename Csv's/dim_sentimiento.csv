@@ -1,0 +1,5 @@
+sk_sentimiento	nombre	rango_puntaje
+1	Positiva	4-5
+2	Neutra	3
+3	Negativa	1-2
+4	Sin clasificar	Sin puntaje
